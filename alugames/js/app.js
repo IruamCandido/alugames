@@ -7,6 +7,8 @@ if (imagem.classList.contains('dashboard__item__img--rented')) {
     imagem.classList.remove('dashboard__item__img--rented');
     botao.classList.remove('dashboard__item__button--return');
     botao.textContent = 'Alugar';
+    jogosalugados --
+    jogosAlugados();
     
 //No projeto Alugames, uma confirmação ao devolver um jogo,
 // solicitando ao usuário que confirme a devolução antes que ela seja concluída.
@@ -28,5 +30,11 @@ else
     imagem.classList.add('dashboard__item__img--rented');
     botao.classList.add('dashboard__item__button--return');
     botao.textContent = 'Devolver';
+    jogosalugados ++;
+    jogosAlugados();
     }
+}
+let jogosalugados = 1;
+function jogosAlugados() {
+    console.log(`Jogos Alugados: ${jogosalugados}`)
 }
